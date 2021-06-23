@@ -31,4 +31,13 @@ describe('Word', () => {
     word = new Word("breakable");
     expect(word.wordVowelCount()).toEqual(4);
   });
+
+  test('')
 });
+
+// https://factsumo.com/blog/syllable-rules-overview/
+// seperate 2 consecutive consonants between vowels, slice() after vowel, 
+// T+H=th; digraphs that combine make a new sound
+// ea ai; 5 vowels that make up a total of 18 vowel sounds
+
+

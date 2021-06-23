@@ -75,6 +75,7 @@ export class Haiku {
 export class Word {
   constructor(word) {
     this.word = word;
+    //syllables = function to find number of syllables//
   }
   wordVowelCount() {
     const letterArray = this.word.toLowerCase().split("");
