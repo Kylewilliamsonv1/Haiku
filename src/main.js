@@ -1,4 +1,4 @@
-import Template from './temp1.js';
+import Template from './js/haiku.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
