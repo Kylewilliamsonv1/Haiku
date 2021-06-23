@@ -77,31 +77,15 @@ export class Word {
     this.word = word;
   }
   wordVowelCount() {
-    let vowelLineArray = [];
-    let line1VowelCount = 0;
-    let line2VowelCount = 0;
-    let line3VowelCount = 0;
+    const letterArray = this.word.toLowerCase().split("");
+    let vowelCount = 0;
     vowelArray.forEach(i => {
-      this.line1.toLowerCase().split("").forEach(j => {
+      letterArray.forEach(j => {
         if (j.includes(i)) {
-          line1VowelCount++;
-        }
-      });
-      this.line2.toLowerCase().split("").forEach(j => {
-        if (j.includes(i)) {
-          line2VowelCount++;
-        }
-      });
-      this.line3.toLowerCase().split("").forEach(j => {
-        if (j.includes(i)) {
-          line3VowelCount++;
+          vowelCount++;
         }
       });
     });
-    
-
-  vowelLineArray.push(line1VowelCount,line2VowelCount,line3VowelCount);
-    return vowelLineArray;
+    return vowelCount;
   }
 }
-
