@@ -6,7 +6,10 @@ export class Haiku {
     this.line3 = line3;
   }
   checkHaiku() {
-    if (this.lineSyllableCount === [5,7,5]) {
+    let checkArray = this.lineSyllableCount().join("");
+    let correctHaiku = "575";
+    console.log(this.lineSyllableCount());
+    if (checkArray === correctHaiku) {
       return this.joinLines();
     } else {
       return "This doesn't match the syllable pattern or you're using some funky words!"
@@ -133,12 +136,17 @@ export class Word {
   }
   checkEndsWithVCE() {
     const letterArray = this.word.toLowerCase().split("");
-    if (letterArray[letterArray.length-1] === "e") {
-      if (letterArray[letterArray.length-2] === "l") {
-        return 0;
+    if (letterArray.length > 3) {
+      if (letterArray[letterArray.length-1] === "e") {
+        if (letterArray[letterArray.length-2] === "l") {
+          return 0;
+        } else {
+          return 1;
+        }
       } else {
-        return 1;
+        return 0;
       }
+
     } else {
       return 0;
     }
